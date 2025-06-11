@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -33,7 +34,9 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import ir.mehrafzoon.composedatepicker.core.component.BoldFont
+import ir.mehrafzoon.composedatepicker.core.component.MediumFont
 import ir.mehrafzoon.composedatepicker.core.component.RegularFont
+import ir.mehrafzoon.composedatepicker.core.component.ThinFont
 import ir.mehrafzoon.composedatepicker.core.component.rememberDialogDatePicker
 import ir.mehrafzoon.composedatepicker.sheet.DatePickerModalBottomSheet
 import ir.mehrafzoon.composedatepicker.ui.theme.ComposeDatePickerTheme
@@ -122,6 +125,9 @@ fun Greeting() {
             },
             font = RegularFont,
             textButtonStyle = TextStyle(fontFamily = FontFamily(Font(BoldFont))),
+            //titleStyle = TextStyle(fontFamily = FontFamily(Font(MediumFont))),
+            //titleBottomSheet = "تاریخ مورد نظر خود را انتخاب کنید",
+            //titleModifier = Modifier.padding(start = 10.dp)
         )
     }
 }
