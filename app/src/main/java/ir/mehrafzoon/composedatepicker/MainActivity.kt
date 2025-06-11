@@ -65,6 +65,8 @@ fun Greeting() {
     var persianMonth by remember { mutableStateOf("") }
     var timestamp by remember { mutableStateOf("") }
     var fullDate by remember { mutableStateOf("") }
+    var persianMonthNameAndPersianYear by remember { mutableStateOf("") }
+    var getMiladiFullDate by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -90,6 +92,8 @@ fun Greeting() {
         Text(gregorianDate)
         Text(persianMonth)
         Text(fullDate)
+        Text(persianMonthNameAndPersianYear)
+        Text(getMiladiFullDate)
         if (timestamp.isNotEmpty()){
             Text("timestamp $timestamp")
         }
@@ -108,6 +112,8 @@ fun Greeting() {
                 persianMonth = datePickerController.getPersianMonth().toString()
                 timestamp = datePickerController.getTimestamp().toString()
                 fullDate = datePickerController.getFullDate()
+                persianMonthNameAndPersianYear = datePickerController.getPersianMonthNameAndPersianYear()
+                getMiladiFullDate = datePickerController.getMiladiFullDate()
             },
             sheetState = bottomSheetState,
             controller = datePickerController,

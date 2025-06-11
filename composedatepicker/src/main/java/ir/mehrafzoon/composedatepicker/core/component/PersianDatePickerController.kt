@@ -157,10 +157,18 @@ class PersianDatePickerController {
 
     fun getTimestamp(): Long = date.toGregorian().timeInMillis
 
-    fun getFullDate():String =
-    "${getPersianYear()}/${
-    getPersianMonth().toString().padStart(2, '0')
-    }/${getPersianDay()}"
+    fun getFullDate(): String =
+        "${getPersianYear()}/${
+            getPersianMonth().toString().padStart(2, '0')
+        }/${getPersianDay()}"
+
+    fun getPersianMonthNameAndPersianYear(): String =
+        "${getPersianMonthName()} ${getPersianYear()}"
+
+    fun getMiladiFullDate(): String =
+        " ${getGregorianYear()}/${
+            getGregorianMonth().toString().padStart(2, '0')
+        }/${getGregorianDay()}"
 
     internal fun updateFromCustomNumberPicker(
         newYear: Int? = null,
