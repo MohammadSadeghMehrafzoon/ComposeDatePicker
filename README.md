@@ -59,7 +59,7 @@ fun DatePickerModalBottomSheet() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("با کلیک بر روی دکمه انتخاب تاریخ مورد نظر خود را انتخاب کنید")
+        Text("با کلیک بر روی دکمه زیر تاریخ مورد نظر خود را انتخاب کنید")
         Spacer(Modifier.height(10.dp))
         Button(
             onClick = {
