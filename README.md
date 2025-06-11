@@ -1,4 +1,4 @@
-# ComposeDatePickerPersian
+# Compose Date Picker Persian
 [![](https://jitpack.io/v/MohammadSadeghMehrafzoon/ComposeDatePicker.svg)](https://jitpack.io/#MohammadSadeghMehrafzoon/ComposeDatePicker)
 
 
