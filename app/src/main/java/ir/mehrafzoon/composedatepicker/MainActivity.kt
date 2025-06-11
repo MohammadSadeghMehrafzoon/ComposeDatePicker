@@ -63,8 +63,8 @@ fun Greeting() {
     var persianFullDate by remember { mutableStateOf("") }
     var gregorianDate by remember { mutableStateOf("") }
     var persianMonth by remember { mutableStateOf("") }
-    var date by remember { mutableStateOf("") }
     var timestamp by remember { mutableStateOf("") }
+    var fullDate by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -89,7 +89,7 @@ fun Greeting() {
         Text(persianFullDate)
         Text(gregorianDate)
         Text(persianMonth)
-        Text(date)
+        Text(fullDate)
         if (timestamp.isNotEmpty()){
             Text("timestamp $timestamp")
         }
@@ -107,12 +107,7 @@ fun Greeting() {
                 gregorianDate = datePickerController.getGregorianDate().toString()
                 persianMonth = datePickerController.getPersianMonth().toString()
                 timestamp = datePickerController.getTimestamp().toString()
-                date =
-                    "${datePickerController.getPersianYear()}/${
-                        datePickerController.getPersianMonth().toString().padStart(2, '0')
-                    }/${datePickerController.getPersianDay()}"
-
-
+                fullDate = datePickerController.getFullDate()
             },
             sheetState = bottomSheetState,
             controller = datePickerController,
