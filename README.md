@@ -1,11 +1,11 @@
+# ComposeDatePickerPersian
+[![](https://jitpack.io/v/MohammadSadeghMehrafzoon/ComposeDatePicker.svg)](https://jitpack.io/#MohammadSadeghMehrafzoon/ComposeDatePicker)
 
 
 
 ### 📆 کتابخانه‌ی ComposeDatePickerPersian
-
-
-
 ‏ComposeDatePickerBottomSheet یک کامپوننت قدرتمند، منعطف و زیبای انتخاب تاریخ شمسی است که بر پایه‌ی Jetpack Compose طراحی شده و تجربه‌ای روان و حرفه‌ای برای انتخاب تاریخ در اپلیکیشن‌های فارسی فراهم می‌کند.
+
 
 ## ✨ ویژگی‌ها
 
