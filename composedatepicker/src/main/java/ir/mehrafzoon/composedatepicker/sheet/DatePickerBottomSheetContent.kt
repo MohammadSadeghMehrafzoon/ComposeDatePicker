@@ -116,7 +116,6 @@ internal fun DatePickerBottomSheetContent(
                 modifier = modifier
                     .fillMaxWidth()
                     .wrapContentHeight()
-                    .padding(WindowInsets.navigationBars.asPaddingValues())
             ) {
                 Column(
                     modifier = Modifier
@@ -184,9 +183,7 @@ internal fun DatePickerBottomSheetContent(
                         }
                     }
                 }
-
             }
-
         }
     }
 }

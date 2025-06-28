@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -108,7 +109,7 @@ fun Greeting() {
         DatePickerModalBottomSheet(
             modifier = Modifier
                 .fillMaxWidth()
-                .wrapContentHeight(),
+                .heightIn(150.dp),
             onSubmitClick = {
                 persianFullDate = datePickerController.getPersianFullDate()
                 gregorianDate = datePickerController.getGregorianDate().toString()
@@ -127,7 +128,7 @@ fun Greeting() {
             textButtonStyle = TextStyle(fontFamily = FontFamily(Font(BoldFont))),
             //titleStyle = TextStyle(fontFamily = FontFamily(Font(MediumFont))),
             //titleBottomSheet = "تاریخ مورد نظر خود را انتخاب کنید",
-            //titleModifier = Modifier.padding(start = 10.dp)
+            //titleModifier = Modifier.padding(start = 30.dp)
         )
     }
 }
