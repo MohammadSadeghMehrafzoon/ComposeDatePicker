@@ -34,7 +34,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.github.MohammadSadeghMehrafzoon:ComposeDatePicker:V1.1.0")
+    implementation("com.github.MohammadSadeghMehrafzoon:ComposeDatePicker:V1.1.1")
 }
 ```
 
