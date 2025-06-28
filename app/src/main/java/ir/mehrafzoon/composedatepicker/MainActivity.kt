@@ -109,7 +109,7 @@ fun Greeting() {
         DatePickerModalBottomSheet(
             modifier = Modifier
                 .fillMaxWidth()
-                .heightIn(150.dp),
+                .wrapContentHeight(),
             onSubmitClick = {
                 persianFullDate = datePickerController.getPersianFullDate()
                 gregorianDate = datePickerController.getGregorianDate().toString()
