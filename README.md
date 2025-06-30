@@ -3,8 +3,8 @@
 
 
 
-### 📆 کتابخانه‌ی ComposeDatePickerPersian
-‏ComposeDatePickerBottomSheet یک کامپوننت قدرتمند، منعطف و زیبای انتخاب تاریخ شمسی است که بر پایه‌ی Jetpack Compose طراحی شده و تجربه‌ای روان و حرفه‌ای برای انتخاب تاریخ در اپلیکیشن‌های فارسی فراهم می‌کند.
+### 📆 کتابخانه‌ی Compose DatePicker Persian
+‏Compose DatePicker BottomSheet یک کامپوننت قدرتمند، منعطف و زیبای انتخاب تاریخ شمسی است که بر پایه‌ی Jetpack Compose طراحی شده و تجربه‌ای روان و حرفه‌ای برای انتخاب تاریخ در اپلیکیشن‌های فارسی فراهم می‌کند.
 
 
 ## ✨ ویژگی‌ها
@@ -34,7 +34,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.github.MohammadSadeghMehrafzoon:ComposeDatePicker:V1.1.0")
+    implementation("com.github.MohammadSadeghMehrafzoon:ComposeDatePicker:V1.1.1")
 }
 ```
 
