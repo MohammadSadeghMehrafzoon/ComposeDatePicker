@@ -34,7 +34,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.github.MohammadSadeghMehrafzoon:ComposeDatePicker:V1.1.1")
+    implementation("com.github.MohammadSadeghMehrafzoon:ComposeDatePicker:V1.1.2")
 }
 ```
 
@@ -111,6 +111,7 @@ fun DatePickerModalBottomSheet() {
             },
             font = RegularFont,
             textButtonStyle = TextStyle(fontFamily = FontFamily(Font(BoldFont))),
+            //datePickerWithoutDay = true
             //titleStyle = TextStyle(fontFamily = FontFamily(Font(MediumFont))),
             //titleBottomSheet = "تاریخ مورد نظر خود را انتخاب کنید",
             //titleModifier = Modifier.padding(start = 10.dp)
@@ -216,6 +217,7 @@ fun DatePickerModalBottomSheet() {
 | `properties`       | `ModalBottomSheetProperties` — ویژگی‌های پیشرفته‌تر Bottom Sheet.                          |
 | `onDismissRequest` | ✅ **ضروری** — کال‌بک هنگام بستن (مثلاً با کشیدن یا لمس خارج).                 |
 | `onSubmitClick`    | ✅ **ضروری** — کال‌بک هنگام کلیک روی دکمه تایید.                                            |
+| `datePickerWithoutDay`    | انتخابگر تاریخ  فقط به حالت انتخاب ماه و سال تغییر می‌کند و انتخاب روز را پنهان می‌کند.                                          | 
 
 
 ## نمونه پیاده سازی شده
