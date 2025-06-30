@@ -126,6 +126,7 @@ fun Greeting() {
             },
             font = RegularFont,
             textButtonStyle = TextStyle(fontFamily = FontFamily(Font(BoldFont))),
+            //datePickerWithoutDay = true
             //titleStyle = TextStyle(fontFamily = FontFamily(Font(MediumFont))),
             //titleBottomSheet = "تاریخ مورد نظر خود را انتخاب کنید",
             //titleModifier = Modifier.padding(start = 30.dp)

@@ -66,6 +66,7 @@ fun DatePickerModalBottomSheet(
     properties: ModalBottomSheetProperties = ModalBottomSheetDefaults.properties(),
     onDismissRequest: () -> Unit,
     onSubmitClick: () -> Unit,
+    datePickerWithoutDay: Boolean = false
 ) {
     val coroutine = rememberCoroutineScope()
 
@@ -92,6 +93,7 @@ fun DatePickerModalBottomSheet(
                     }
                 },
                 onSubmitClick = onSubmitClick,
+                datePickerWithoutDay = datePickerWithoutDay
             )
         },
         sheetMaxWidth = sheetMaxWidth,

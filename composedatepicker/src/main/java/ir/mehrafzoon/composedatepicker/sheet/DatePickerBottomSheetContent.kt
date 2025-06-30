@@ -21,11 +21,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentHeight
@@ -55,6 +52,7 @@ import ir.mehrafzoon.composedatepicker.core.component.AppButton
 import ir.mehrafzoon.composedatepicker.core.component.PersianDatePickerController
 import ir.mehrafzoon.composedatepicker.core.component.TextButton
 import ir.mehrafzoon.composedatepicker.lineardatepicker.PersianDatePicker
+import ir.mehrafzoon.composedatepicker.lineardatepicker.PersianDatePickerWithoutDay
 import ir.mehrafzoon.composedatepicker.utils.Tools.isDateToday
 import java.util.Date
 
@@ -77,6 +75,7 @@ internal fun DatePickerBottomSheetContent(
     onDateChanged: ((year: Int, month: Int, day: Int) -> Unit)? = null,
     onDismissRequest: () -> Unit,
     onSubmitClick: () -> Unit,
+    datePickerWithoutDay: Boolean = false
 ) {
 
     val unSelected = unSelectedStyle ?: TextStyle(
@@ -125,23 +124,42 @@ internal fun DatePickerBottomSheetContent(
                 ) {
                     Spacer(modifier = Modifier.height(40.dp))
 
-                    PersianDatePicker(
-                        controller = tmpController,
-                        contentColor = lineColor,
-                        selectedStyle = selected,
-                        unSelectedStyle = unSelected,
-                        font = font,
-                        modifier = Modifier
-                            .padding(start = 8.dp, end = 8.dp, top = 8.dp)
-                            .fillMaxWidth(),
-                        onDateChanged = { year, month, day ->
-                            if (onDateChanged != null) {
-                                onDateChanged(year, month, day)
-                            }
-                            recomposeToggleState.value = !recomposeToggleState.value
-                        },
-                    )
+                    if (datePickerWithoutDay) {
+                        PersianDatePickerWithoutDay(
+                            controller = tmpController,
+                            contentColor = lineColor,
+                            selectedStyle = selected,
+                            unSelectedStyle = unSelected,
+                            font = font,
+                            modifier = Modifier
+                                .padding(start = 8.dp, end = 8.dp, top = 8.dp)
+                                .fillMaxWidth(),
+                            onDateChanged = { year, month, day ->
+                                if (onDateChanged != null) {
+                                    onDateChanged(year, month, day)
+                                }
+                                recomposeToggleState.value = !recomposeToggleState.value
+                            },
+                        )
 
+                    } else {
+                        PersianDatePicker(
+                            controller = tmpController,
+                            contentColor = lineColor,
+                            selectedStyle = selected,
+                            unSelectedStyle = unSelected,
+                            font = font,
+                            modifier = Modifier
+                                .padding(start = 8.dp, end = 8.dp, top = 8.dp)
+                                .fillMaxWidth(),
+                            onDateChanged = { year, month, day ->
+                                if (onDateChanged != null) {
+                                    onDateChanged(year, month, day)
+                                }
+                                recomposeToggleState.value = !recomposeToggleState.value
+                            },
+                        )
+                    }
 
                     Spacer(modifier = Modifier.size(16.dp))
 
