@@ -1,28 +1,29 @@
-# Compose Date Picker Persian
+# Compose DatePicker Persian
 [![](https://jitpack.io/v/MohammadSadeghMehrafzoon/ComposeDatePicker.svg)](https://jitpack.io/#MohammadSadeghMehrafzoon/ComposeDatePicker)
 
 
 
-### 📆 کتابخانه‌ی Compose DatePicker Persian
-‏Compose DatePicker BottomSheet یک کامپوننت قدرتمند، منعطف و زیبای انتخاب تاریخ شمسی است که بر پایه‌ی Jetpack Compose طراحی شده و تجربه‌ای روان و حرفه‌ای برای انتخاب تاریخ در اپلیکیشن‌های فارسی فراهم می‌کند.
+### 📆 Compose DatePicker Persian Library
+Compose DatePicker BottomSheet is a powerful, flexible, and beautifully designed component for selecting Persian (Jalali) dates. Built on Jetpack Compose, it provides a smooth and professional experience for date selection in Persian apps.
+
+## ✨ Features
 
 
-## ✨ ویژگی‌ها
-
-- ✅ تقویم شمسی کامل و قابل استفاده در Jetpack Compose
-- 🌐 پشتیبانی کامل از زبان فارسی (روزها، ماه‌ها، اعداد)
-- 📅 خروجی‌های تاریخ با فرمت شمسی و میلادی
-- 🖋️ فونت فارسی سفارشی با چند وزن متفاوت
-- ⚙️ ساختار بهینه و قابل استفاده در پروژه‌های Compose
-- 📆 پشتیبانی از حالت انتخاب ماه و سال بدون نمایش انتخاب روز (برای زمانی که نیاز به انتخاب روز نیست)
-- 🎨 امکان شخصی‌سازی کامل ظاهر، رنگ‌ها، فونت، اندازه‌ها و نحوه نمایش
+- ✅ Full Persian calendar support, fully compatible with Jetpack Compose
+- 🌐 Complete Persian language support (days, months, numbers)
+- 📅 Date output in both Persian (Jalali) and Gregorian formats
+- 🖋️ Custom Persian fonts with multiple weights
+- ⚙️ Optimized architecture, ready to use in Compose-based projects
+- 📆 Support for selecting only month and year without requiring a day selection (ideal for use cases where day selection is unnecessary)
+- 🎨 Fully customizable UI: colors, fonts, sizes, and layout
 
 
 
+## 🛠️ Library Setup
+### Step 1: Add JitPack to settings.gradle.kts
+(Let me know if you'd like the actual Gradle setup steps too — I can add that part as well.)
 
-## 🛠️ تنظیمات کتابخانه 
 
-### مرحله ۱: افزودن JitPack در settings.gradle.kts
 ```kotlin
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -33,7 +34,7 @@ dependencyResolutionManagement {
 }
 ```
 
-### مرحله ۲: اضافه کردن dependency
+### Step 2: Adding the Dependency
 
 ```kotlin
 dependencies {
@@ -42,8 +43,8 @@ dependencies {
 ```
 
 
+## 💻 Sample Code
 
-## 💻 نمونه کد 
 ```kotlin
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -126,103 +127,95 @@ fun DatePickerModalBottomSheet() {
 
 
 
-### 📅 قابلیت های ComposeDatePicker 
+### 📅 Features of Compose DatePicker Persian
 
-## 📅 توابع تاریخ شمسی
+### 📅 Persian Date Functions
 
-| 🔧 تابع                              | 📝 توضیحات                                                            |
-|--------------------------------------|------------------------------------------------------------------------|
-| `getPersianYear(): Int`              | برگرداندن **سال شمسی** (مثال: `1403`)                                 |
-| `getPersianMonth(): Int`             | برگرداندن **شماره ماه شمسی** بین ۱ تا ۱۲ (مثال: `3` برای خرداد)      |
-| `getPersianDay(): Int`               | برگرداندن **روز ماه شمسی** بین ۱ تا ۳۱ (مثال: `19`)                   |
-| `getPersianMonthName(): String`      | برگرداندن **نام ماه شمسی** (مثال: `"خرداد"`)                         |
-| `getPersianDayOfWeekName(): String`  | برگرداندن **نام روز هفته** به فارسی (مثال: `"چهارشنبه"`)             |
-
-
-
-## 🌍 توابع تاریخ میلادی
-
-| 🔧 تابع                              | 📝 توضیحات                                                            |
-|--------------------------------------|------------------------------------------------------------------------|
-| `getGregorianYear(): Int`            | برگرداندن **سال میلادی** (مثال: `2025`)                               |
-| `getGregorianMonth(): Int`           | برگرداندن **شماره ماه میلادی** (۱ تا ۱۲، مثال: `6` برای ژوئن)        |
-| `getGregorianDay(): Int`             | برگرداندن **روز ماه میلادی** (مثال: `11`)                             |
-| `getGregorianDate(): Date`           | برگرداندن **تاریخ کامل میلادی** به‌صورت شیء `Date`                    |
+| 🔧 Function                          | 📝 Description                                                                 |
+|-------------------------------------|---------------------------------------------------------------------------------|
+| `getPersianYear(): Int`             | Returns the **Persian year** (e.g., `1403`)                                    |
+| `getPersianMonth(): Int`            | Returns the **Persian month number** from 1 to 12 (e.g., `3` for *Khordad*)    |
+| `getPersianDay(): Int`              | Returns the **Persian day of the month** from 1 to 31 (e.g., `19`)             |
+| `getPersianMonthName(): String`     | Returns the **Persian month name** (e.g., `"خرداد"`)                         |
+| `getPersianDayOfWeekName(): String` | Returns the **Persian day of the week name** (e.g., `"چهارشنبه"`)         |
 
 
 
-## 🧠 اطلاعات عمومی تاریخ
+## 🌍 Gregorian Date Functions
 
-| 🔧 تابع                | 📝 توضیحات                                                                 |
-|------------------------|------------------------------------------------------------------------------|
-| `getDayOfWeek(): Int`  | برگرداندن **شماره روز هفته** (تفسیر عدد بسته به پیاده‌سازی متفاوت است)      |
-
-
-
-## 🗓️ رشته‌های تاریخ فرمت‌شده
-
-| 🔧 تابع                                         | 📝 توضیحات                                                                           |
-|--------------------------------------------------|----------------------------------------------------------------------------------------|
-| `getFullDate(): String`                         | نمایش **تاریخ شمسی کامل** به‌صورت `yyyy/MM/dd` (مثال: `"1403/03/19"`)               |
-| `getPersianMonthNameAndPersianYear(): String`   | ترکیب **نام ماه و سال شمسی** (مثال: `"خرداد 1403"`)                                 |
-| `getMiladiFullDate(): String`                   | نمایش **تاریخ میلادی کامل** به‌صورت `yyyy/MM/dd` (مثال: `"2025/06/11"`)             |
-| `getPersianFullDate(): String`                  | نمایش **تاریخ شمسی کامل با جزئیات** (مثال: `"چهارشنبه 19 خرداد 1403"`)              |
+| 🔧 Function                          | 📝 Description                                                                 |
+|-------------------------------------|---------------------------------------------------------------------------------|
+| `getGregorianYear(): Int`           | Returns the **Gregorian year** (e.g., `2025`)                                  |
+| `getGregorianMonth(): Int`          | Returns the **Gregorian month number** from 1 to 12 (e.g., `6` for June)       |
+| `getGregorianDay(): Int`            | Returns the **Gregorian day of the month** (e.g., `11`)                        |
+| `getGregorianDate(): Date`          | Returns the **full Gregorian date** as a `Date` object                         |
 
 
 
-## ⏱️ ابزار Timestamp
+## 🧠 General Date Information
 
-| 🔧 تابع                 | 📝 توضیحات                                                                         |
-|-------------------------|--------------------------------------------------------------------------------------|
-| `getTimestamp(): Long`  | برگرداندن **تایم‌استمپ یونیکس** (تعداد میلی‌ثانیه از 1970-01-01) برای تاریخ فعلی  |
+| 🔧 Function              | 📝 Description                                                                 |
+|-------------------------|---------------------------------------------------------------------------------|
+| `getDayOfWeek(): Int`   | Returns the **day of the week number** (the meaning of the number may vary depending on the implementation) |
 
 
 
 
+## 🗓️ Formatted Date Strings
+
+| 🔧 Function                                      | 📝 Description                                                                                   |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| `getFullDate(): String`                         | Returns the **full Persian date** in `yyyy/MM/dd` format (e.g., `"1403/03/19"`)                 |
+| `getPersianMonthNameAndPersianYear(): String`   | Returns a combination of **Persian month name and year** (e.g., `"خرداد 1403"`)               |
+| `getMiladiFullDate(): String`                   | Returns the **full Gregorian date** in `yyyy/MM/dd` format (e.g., `"2025/06/11"`)               |
+| `getPersianFullDate(): String`                  | Returns the **detailed Persian date** (e.g., `"چهارشنبه 19 خرداد 1403"`)                 |
+
+
+## ⏱️ Timestamp Utility
+
+| 🔧 Function              | 📝 Description                                                                                   |
+|-------------------------|--------------------------------------------------------------------------------------------------|
+| `getTimestamp(): Long`  | Returns the **Unix timestamp** (number of milliseconds since `1970-01-01`) for the current date |
 
 
 
+## 🔤 Persian Fonts
+
+| Font Variable           | Font Weight       | Usage Description                                                       |
+|-------------------------|-------------------|-------------------------------------------------------------------------|
+| `BoldFont`              | Bold (700)        | Suitable for titles and highly emphasized sections                      |
+| `MediumFont`            | Medium (500)      | Ideal for buttons or semi-bold texts                                    |
+| `RegularFont`           | Regular (400)     | Used for general body text and main content                             |
+| `LightFont`             | Light (300)       | Suitable for secondary or descriptive texts                             |
+| `ThinFont`              | Thin (200)        | Suitable for very light and delicate text                               |
+| `HairlineFont`          | Hairline (100)    | The thinnest font weight, ideal for decorative or neutral text          |
 
 
-## 🔤 فونت‌های فارسی 
+## ⚙️ Configurable Parameters of ComposeDatePickerBottomSheet
 
-| متغیر فونت             | وزن فونت (Weight) | توضیح کاربردی                                    |
-|------------------------|-------------------|---------------------------------------------------|
-| `BoldFont`             | Bold (700)        | مناسب برای عنوان‌ها و بخش‌هایی با تأکید بالا     |
-| `MediumFont`           | Medium (500)      | مناسب برای دکمه‌ها یا متن‌های نیمه‌برجسته        |
-| `RegularFont`          | Regular (400)     | استفاده برای متن‌های عمومی و بدنه اصلی           |
-| `LightFont`            | Light (300)       | مناسب برای متن‌های ثانویه یا توضیحی              |
-| `ThinFont`             | Thin (200)        | مناسب برای متن‌های بسیار سبک و ظریف              |
-| `HairlineFont`         | Hairline (100)    | باریک‌ترین وزن فونت، برای تزئینات یا متن خنثی    |
-
-
- ## ⚙️ پارامترهای قابل تنظیم ComposeDatePickerBottomSheet
-
-
-| پارامتر            | نوع داده / توضیحات                                                                         |
-| ------------------ | ------------------------------------------------------------------------------------------ |
-| `modifier`         | `Modifier` — برای تنظیم نمای کلی Bottom Sheet.                                             |
-| `titleModifier`    | `Modifier` — مخصوص عنوان بالای Bottom Sheet.                                               |
-| `sheetState`       | `SheetState` — وضعیت فعلی Bottom Sheet. از `rememberModalBottomSheetState()` استفاده کنید |
-| `controller`       | ✅ **ضروری** — کنترل‌کننده تاریخ انتخاب شده. باید در کامپوزبل ساخته و به خاطر سپرده شود    |
-| `submitTitle`      | `String` — متن دکمه تایید (پیش‌فرض: تایید)                              |
-| `titleBottomSheet` | `String` — عنوانی که در بالای Bottom Sheet نمایش داده می‌شود                              |
-| `titleStyle`       | `TextStyle` — سبک (فونت، سایز، رنگ) عنوان                                                 |
-| `textButtonStyle`  | `TextStyle` — سبک متن دکمه تایید                                                         |
-| `unSelectedStyle`  | `TextStyle?` — سبک برای تاریخ‌های انتخاب‌نشده (اختیاری)                                   |
-| `selectedStyle`    | `TextStyle?` — سبک تاریخ انتخاب‌شده (اختیاری)                                             |
-| `buttonColor`      | `Color` —  رنگ پس‌زمینه دکمه تایید                                                        |
-| `containerColor`   | `Color` — رنگ پس‌زمینه Bottom Sheet                                                       |
-| `lineColor`        | `Color` — رنگ خطوط جداکننده داخل انتخابگر                                                |
-| `shape`            | `Shape` — شکل گوشه‌های Bottom Sheet                                                      |
-| `font`             | `Int?` —  فونت سفارشی                                                      |
-| `onDateChanged`    | `(year: Int, month: Int, day: Int) -> Unit` — کال‌بک هنگام تغییر تاریخ انتخابی.            |
-| `properties`       | `ModalBottomSheetProperties` — ویژگی‌های پیشرفته‌تر Bottom Sheet.                          |
-| `onDismissRequest` | ✅ **ضروری** — کال‌بک هنگام بستن (مثلاً با کشیدن یا لمس خارج).                 |
-| `onSubmitClick`    | ✅ **ضروری** — کال‌بک هنگام کلیک روی دکمه تایید.                                            |
-| `datePickerWithoutDay`    | انتخابگر تاریخ  فقط به حالت انتخاب ماه و سال تغییر می‌کند و انتخاب روز را پنهان می‌کند.                                          | 
+| Parameter            | Type / Description                                                                                   |
+|----------------------|------------------------------------------------------------------------------------------------------|
+| `modifier`           | `Modifier` — Used to configure the overall layout of the Bottom Sheet.                              |
+| `titleModifier`      | `Modifier` — Modifier for the top title inside the Bottom Sheet.                                     |
+| `sheetState`         | `SheetState` — Current state of the Bottom Sheet. Use `rememberModalBottomSheetState()` to create it. |
+| `controller`         | ✅ **Required** — Controller for the selected date. Must be created and remembered inside a composable. |
+| `submitTitle`        | `String` — Text for the confirm button (default: `"تایید"` / `"Confirm"`)                           |
+| `titleBottomSheet`   | `String` — Title displayed at the top of the Bottom Sheet.                                           |
+| `titleStyle`         | `TextStyle` — Style for the title text (font, size, color, etc.).                                   |
+| `textButtonStyle`    | `TextStyle` — Style for the confirm button text.                                                     |
+| `unSelectedStyle`    | `TextStyle?` — Style for unselected date items (optional).                                           |
+| `selectedStyle`      | `TextStyle?` — Style for the selected date item (optional).                                          |
+| `buttonColor`        | `Color` — Background color of the confirm button.                                                    |
+| `containerColor`     | `Color` — Background color of the Bottom Sheet.                                                      |
+| `lineColor`          | `Color` — Color of the divider lines inside the picker.                                              |
+| `shape`              | `Shape` — Shape of the Bottom Sheet corners.                                                         |
+| `font`               | `Int?` — Custom font ID.                                                                              |
+| `onDateChanged`      | `(year: Int, month: Int, day: Int) -> Unit` — Callback triggered when the selected date changes.     |
+| `properties`         | `ModalBottomSheetProperties` — Advanced Bottom Sheet behavior configuration.                         |
+| `onDismissRequest`   | ✅ **Required** — Callback triggered when the sheet is dismissed (e.g., drag down or tap outside).    |
+| `onSubmitClick`      | ✅ **Required** — Callback triggered when the confirm button is clicked.                              |
+| `datePickerWithoutDay` | `Boolean` — Enables **month/year only** selection mode and hides the day selector.                |
 
 
-## نمونه پیاده سازی شده
-
+## Sample Implementation
 ![InCollage_20250630_091654344](https://github.com/user-attachments/assets/4e02f908-9e6e-47d5-a375-427da634e106)
