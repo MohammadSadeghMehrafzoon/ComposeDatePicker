@@ -21,7 +21,6 @@ Compose DatePicker BottomSheet is a powerful, flexible, and beautifully designed
 
 ## 🛠️ Library Setup
 ### Step 1: Add JitPack to settings.gradle.kts
-(Let me know if you'd like the actual Gradle setup steps too — I can add that part as well.)
 
 
 ```kotlin
