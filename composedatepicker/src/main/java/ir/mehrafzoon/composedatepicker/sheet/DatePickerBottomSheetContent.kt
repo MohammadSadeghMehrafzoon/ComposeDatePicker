@@ -47,6 +47,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import ir.huri.jcal.JalaliCalendar
 import ir.mehrafzoon.composedatepicker.R
 import ir.mehrafzoon.composedatepicker.core.component.AppButton
 import ir.mehrafzoon.composedatepicker.core.component.PersianDatePickerController
@@ -75,7 +76,9 @@ internal fun DatePickerBottomSheetContent(
     onDateChanged: ((year: Int, month: Int, day: Int) -> Unit)? = null,
     onDismissRequest: () -> Unit,
     onSubmitClick: () -> Unit,
-    datePickerWithoutDay: Boolean = false
+    datePickerWithoutDay: Boolean = false,
+    useInitialDate: Boolean = false,
+    initialDate: Triple<Int, Int, Int>? = null
 ) {
 
     val unSelected = unSelectedStyle ?: TextStyle(
@@ -90,15 +93,25 @@ internal fun DatePickerBottomSheetContent(
         color = Color.Black
     )
 
-
     val recomposeToggleState = remember { mutableStateOf(false) }
     LaunchedEffect(recomposeToggleState.value) {}
 
     val tmpController by remember(key1 = controller) {
         mutableStateOf(PersianDatePickerController())
     }
+
     LaunchedEffect(controller) {
-        tmpController.updateDate(Date(controller.date.toGregorian().timeInMillis))
+        if (useInitialDate && initialDate != null) {
+            val persianDate = JalaliCalendar(
+                initialDate.first,
+                initialDate.second,
+                initialDate.third
+            )
+            val gregorianDate = persianDate.toGregorian().time
+            tmpController.updateDate(gregorianDate)
+        } else {
+            tmpController.updateDate(Date(controller.date.toGregorian().timeInMillis))
+        }
     }
 
     val isToday = tmpController.getGregorianDate().isDateToday()
