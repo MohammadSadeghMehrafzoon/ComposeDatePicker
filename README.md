@@ -16,6 +16,7 @@ Compose DatePicker BottomSheet is a powerful, flexible, and beautifully designed
 - ⚙️ Optimized architecture, ready to use in Compose-based projects
 - 📆 Support for selecting only month and year without requiring a day selection (ideal for use cases where day selection is unnecessary)
 - 🎨 Fully customizable UI: colors, fonts, sizes, and layout
+- 📅 Ability to provide an initial default date to be pre-selected when opening the Persian date picker, useful for cases where the user has previously selected a date and now needs to edit it.
 
 
 
@@ -37,7 +38,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.github.MohammadSadeghMehrafzoon:ComposeDatePicker:V1.1.2")
+    implementation("com.github.MohammadSadeghMehrafzoon:ComposeDatePicker:V1.1.3")
 }
 ```
 
@@ -114,6 +115,8 @@ fun DatePickerModalBottomSheet() {
             },
             font = RegularFont,
             textButtonStyle = TextStyle(fontFamily = FontFamily(Font(BoldFont))),
+            //useInitialDate = true,
+            //initialDate = Triple(1404,6,27)
             //datePickerWithoutDay = true
             //titleStyle = TextStyle(fontFamily = FontFamily(Font(MediumFont))),
             //titleBottomSheet = "تاریخ مورد نظر خود را انتخاب کنید",
@@ -214,6 +217,8 @@ fun DatePickerModalBottomSheet() {
 | `onDismissRequest`   | ✅ **Required** — Callback triggered when the sheet is dismissed (e.g., drag down or tap outside).    |
 | `onSubmitClick`      | ✅ **Required** — Callback triggered when the confirm button is clicked.                              |
 | `datePickerWithoutDay` | `Boolean` — Enables **month/year only** selection mode and hides the day selector.                |
+| `useInitialDate` | `Boolean` — A boolean flag indicating whether to use a predefined date.                |
+| `initialDate` | `Triple` — A Triple<Int, Int, Int> representing the year, month, and day in the Persian calendar. `Sample: Triple(1404,6,27)`.                |
 
 
 ## Sample Implementation
