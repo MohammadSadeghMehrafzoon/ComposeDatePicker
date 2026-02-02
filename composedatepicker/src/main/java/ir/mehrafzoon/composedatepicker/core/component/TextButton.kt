@@ -2,7 +2,7 @@ package ir.mehrafzoon.composedatepicker.core.component
 
 
 /*
- * Copyright (C) 2025 Mohammad Sadegh Mehrafzoon
+ * Copyright (C) 2026 Mohammad Sadegh Mehrafzoon
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

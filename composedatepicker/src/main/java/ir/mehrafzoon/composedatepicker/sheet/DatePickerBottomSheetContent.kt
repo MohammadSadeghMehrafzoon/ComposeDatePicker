@@ -1,7 +1,7 @@
 package ir.mehrafzoon.composedatepicker.sheet
 
 /*
- * Copyright (C) 2025 Mohammad Sadegh Mehrafzoon
+ * Copyright (C) 2026 Mohammad Sadegh Mehrafzoon
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,6 +54,8 @@ import ir.mehrafzoon.composedatepicker.core.component.PersianDatePickerControlle
 import ir.mehrafzoon.composedatepicker.core.component.TextButton
 import ir.mehrafzoon.composedatepicker.lineardatepicker.PersianDatePicker
 import ir.mehrafzoon.composedatepicker.lineardatepicker.PersianDatePickerWithoutDay
+import ir.mehrafzoon.composedatepicker.utils.MaxYear
+import ir.mehrafzoon.composedatepicker.utils.MinYear
 import ir.mehrafzoon.composedatepicker.utils.Tools.isDateToday
 import java.util.Date
 
@@ -78,6 +80,8 @@ internal fun DatePickerBottomSheetContent(
     onSubmitClick: () -> Unit,
     datePickerWithoutDay: Boolean = false,
     useInitialDate: Boolean = false,
+    minYear: MinYear?,
+    maxYear: MaxYear?,
     initialDate: Triple<Int, Int, Int>? = null
 ) {
 
@@ -144,6 +148,8 @@ internal fun DatePickerBottomSheetContent(
                             selectedStyle = selected,
                             unSelectedStyle = unSelected,
                             font = font,
+                            minYear = minYear,
+                            maxYear = maxYear,
                             modifier = Modifier
                                 .padding(start = 8.dp, end = 8.dp, top = 8.dp)
                                 .fillMaxWidth(),
@@ -162,6 +168,8 @@ internal fun DatePickerBottomSheetContent(
                             selectedStyle = selected,
                             unSelectedStyle = unSelected,
                             font = font,
+                            minYear = minYear,
+                            maxYear = maxYear,
                             modifier = Modifier
                                 .padding(start = 8.dp, end = 8.dp, top = 8.dp)
                                 .fillMaxWidth(),

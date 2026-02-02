@@ -1,7 +1,7 @@
 package ir.mehrafzoon.composedatepicker.lineardatepicker
 
 /*
- * Copyright (C) 2025 Mohammad Sadegh Mehrafzoon
+ * Copyright (C) 2026 Mohammad Sadegh Mehrafzoon
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,6 +32,8 @@ import ir.mehrafzoon.composedatepicker.core.component.CustomNumberPicker
 import ir.mehrafzoon.composedatepicker.core.component.NumberPicker
 import ir.mehrafzoon.composedatepicker.core.component.PersianDatePickerController
 import ir.mehrafzoon.composedatepicker.utils.Constant
+import ir.mehrafzoon.composedatepicker.utils.MaxYear
+import ir.mehrafzoon.composedatepicker.utils.MinYear
 import ir.mehrafzoon.composedatepicker.utils.Tools.convertNumberToPersian
 import ir.mehrafzoon.composedatepicker.utils.Tools.toPersianDigits
 
@@ -43,8 +45,22 @@ internal fun PersianDatePicker(
     unSelectedStyle: TextStyle,
     selectedStyle: TextStyle,
     @FontRes font: Int?,
+    minYear: MinYear?,
+    maxYear:MaxYear?,
     onDateChanged: ((year: Int, month: Int, day: Int) -> Unit)? = null,
 ) {
+
+    when (minYear) {
+        null -> Unit
+        MinYear.Off -> Unit
+        is MinYear.On -> controller.updateMinYear(minYear.year)
+    }
+
+    when (maxYear) {
+        null -> Unit
+        MaxYear.Off -> Unit
+        is MaxYear.On -> controller.updateMaxYear(maxYear.year)
+    }
 
     controller.initDate()
 

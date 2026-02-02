@@ -41,6 +41,8 @@ import ir.mehrafzoon.composedatepicker.core.component.ThinFont
 import ir.mehrafzoon.composedatepicker.core.component.rememberDialogDatePicker
 import ir.mehrafzoon.composedatepicker.sheet.DatePickerModalBottomSheet
 import ir.mehrafzoon.composedatepicker.ui.theme.ComposeDatePickerTheme
+import ir.mehrafzoon.composedatepicker.utils.MaxYear
+import ir.mehrafzoon.composedatepicker.utils.MinYear
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -126,6 +128,8 @@ fun Greeting() {
             },
             font = RegularFont,
             textButtonStyle = TextStyle(fontFamily = FontFamily(Font(BoldFont))),
+            //minYear = MinYear.On(1400),
+            //maxYear = MaxYear.On(1407),
             //useInitialDate = true,
             //initialDate = Triple(1404,6,27)
             //datePickerWithoutDay = true

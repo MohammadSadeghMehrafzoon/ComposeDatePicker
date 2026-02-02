@@ -1,7 +1,7 @@
 package ir.mehrafzoon.composedatepicker.sheet
 
 /*
- * Copyright (C) 2025 Mohammad Sadegh Mehrafzoon
+ * Copyright (C) 2026 Mohammad Sadegh Mehrafzoon
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,6 +37,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import ir.mehrafzoon.composedatepicker.R
 import ir.mehrafzoon.composedatepicker.core.component.PersianDatePickerController
+import ir.mehrafzoon.composedatepicker.utils.MaxYear
+import ir.mehrafzoon.composedatepicker.utils.MinYear
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -68,6 +70,8 @@ fun DatePickerModalBottomSheet(
     onSubmitClick: () -> Unit,
     datePickerWithoutDay: Boolean = false,
     useInitialDate: Boolean = false,
+    minYear: MinYear? = MinYear.Off,
+    maxYear: MaxYear? = MaxYear.Off,
     initialDate: Triple<Int, Int, Int>? = null
 ) {
     val coroutine = rememberCoroutineScope()
@@ -97,7 +101,9 @@ fun DatePickerModalBottomSheet(
                 onSubmitClick = onSubmitClick,
                 datePickerWithoutDay = datePickerWithoutDay,
                 useInitialDate = useInitialDate,
-                initialDate = initialDate
+                initialDate = initialDate,
+                minYear = minYear,
+                maxYear = maxYear
             )
         },
         sheetMaxWidth = sheetMaxWidth,
