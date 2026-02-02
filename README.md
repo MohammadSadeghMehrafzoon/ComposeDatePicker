@@ -18,6 +18,7 @@ Compose DatePicker BottomSheet is a powerful, flexible, and beautifully designed
 - 📆 Support for selecting only month and year without requiring a day selection (ideal for use cases where day selection is unnecessary)
 - 🎨 Fully customizable UI: colors, fonts, sizes, and layout
 - 📅 Ability to provide an initial default date to be pre-selected when opening the Persian date picker, useful for cases where the user has previously selected a date and now needs to edit it.
+- 📅 Support for configurable minimum and maximum year limits, allowing precise control over the selectable year range (with sensible defaults when not explicitly defined)
 
 
 
