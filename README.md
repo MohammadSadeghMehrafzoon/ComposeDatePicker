@@ -3,6 +3,7 @@
 
 
 
+
 ### 📆 Compose DatePicker Persian Library
 Compose DatePicker BottomSheet is a powerful, flexible, and beautifully designed component for selecting Persian (Jalali) dates. Built on Jetpack Compose, it provides a smooth and professional experience for date selection in Persian apps.
 
@@ -38,7 +39,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.github.MohammadSadeghMehrafzoon:ComposeDatePicker:V1.1.3")
+    implementation("com.github.MohammadSadeghMehrafzoon:ComposeDatePicker:V1.1.4")
 }
 ```
 
@@ -115,6 +116,8 @@ fun DatePickerModalBottomSheet() {
             },
             font = RegularFont,
             textButtonStyle = TextStyle(fontFamily = FontFamily(Font(BoldFont))),
+            //minYear = MinYear.On(1400),
+            //maxYear = MaxYear.On(1407),
             //useInitialDate = true,
             //initialDate = Triple(1404,6,27)
             //datePickerWithoutDay = true
@@ -219,6 +222,8 @@ fun DatePickerModalBottomSheet() {
 | `datePickerWithoutDay` | `Boolean` — Enables **month/year only** selection mode and hides the day selector.                |
 | `useInitialDate` | `Boolean` — A boolean flag indicating whether to use a predefined date.                |
 | `initialDate` | `Triple` — A Triple<Int, Int, Int> representing the year, month, and day in the Persian calendar. `Sample: Triple(1404,6,27)`.                |
+| `minYear` | `MinYear` — Defines the minimum selectable year (optional, defaults to DatePicker configuration). |
+| `maxYear` | `MaxYear` — Defines the maximum selectable year (optional, defaults to DatePicker configuration). |
 
 
 ## Sample Implementation
